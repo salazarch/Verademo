@@ -29,7 +29,7 @@ COPY app /app
 COPY maven-settings.xml /usr/share/maven/conf/settings.xml
 
 # Compile
-RUN mvn clean package && rm -rf target
+RUN mvn clean package
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["-c"]
